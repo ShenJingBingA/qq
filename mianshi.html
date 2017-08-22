@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Swiper demo</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/mian.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.hammer.min.js"></script>
+</head>
+<script>
+    var myScroll;
+    function loaded () {
+        myScroll = new IScroll('#wrapper');
+    }
+    (function (doc, win) {
+        var docEl = doc.documentElement,
+            resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+            recalc = function () {
+                var clientWidth = docEl.clientWidth;
+                if (!clientWidth) return;
+                if(clientWidth>=750){
+                    docEl.style.fontSize = '100px';
+                }else{
+                    docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                }
+            };
+
+        if (!doc.addEventListener) return;
+        win.addEventListener(resizeEvt, recalc, false);
+        doc.addEventListener('DOMContentLoaded', recalc, false);
+    })(document, window);
+</script>
+<body>
+    <header>学校/场次/组</header>
+    <div class="title">
+        <div>共有多少人面试</div>
+        <span>|</span>
+        <div class="down">
+            <span class="down-down">
+                已面试了多少
+                <img src="images/down_03.png" alt="">
+            </span>
+
+            <img src="images/san_07.png" alt="" class="sanjiao">
+            <div class="down-show">
+                <div>xxxxx</div>
+                <div>xxxxx</div>
+                <div>xxxxx</div>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Swiper -->
+    <div class="swiper-container">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+                <div class="imgBox">
+                    <img src="" alt="">
+                </div>
+                <p class="words">基本信息</p>
+                <div class="infor">
+                    <p>
+                        <span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span>
+                        <span>xxxxx</span>
+                    </p>
+                    <p>
+                        <span>电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话：</span>
+                        <span>xxxxxxxxxxx</span>
+                    </p>
+                    <p>
+                        <span>身份证号：</span>
+                        <span>xxxxxxxxxxxxxxxxxxxx</span>
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBox">
+                    <img src="" alt="">
+                </div>
+                <p class="words">基本信息</p>
+                <div class="infor">
+                    <p>
+                        <span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span>
+                        <span>xxxxx</span>
+                    </p>
+                    <p>
+                        <span>电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话：</span>
+                        <span>xxxxxxxxxxx</span>
+                    </p>
+                    <p>
+                        <span>身份证号：</span>
+                        <span>xxxxxxxxxxxxxxxxxxxx</span>
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBox">
+                    <img src="" alt="">
+                </div>
+                <p class="words">基本信息</p>
+                <div class="infor">
+                    <p>
+                        <span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span>
+                        <span>xxxxx</span>
+                    </p>
+                    <p>
+                        <span>电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话：</span>
+                        <span>xxxxxxxxxxx</span>
+                    </p>
+                    <p>
+                        <span>身份证号：</span>
+                        <span>xxxxxxxxxxxxxxxxxxxx</span>
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBox">
+                    <img src="" alt="">
+                </div>
+                <p class="words">基本信息</p>
+                <div class="infor">
+                    <p>
+                        <span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span>
+                        <span>xxxxx</span>
+                    </p>
+                    <p>
+                        <span>电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话：</span>
+                        <span>xxxxxxxxxxx</span>
+                    </p>
+                    <p>
+                        <span>身份证号：</span>
+                        <span>xxxxxxxxxxxxxxxxxxxx</span>
+                    </p>
+                </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="imgBox">
+                    <img src="" alt="">
+                </div>
+                <p class="words">基本信息</p>
+                <div class="infor">
+                    <p>
+                        <span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span>
+                        <span>xxxxx</span>
+                    </p>
+                    <p>
+                        <span>电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话：</span>
+                        <span>xxxxxxxxxxx</span>
+                    </p>
+                    <p>
+                        <span>身份证号：</span>
+                        <span>xxxxxxxxxxxxxxxxxxxx</span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+    <div class="complete">完成</div>
+
+    <!-- Swiper JS -->
+    <script src="js/swiper.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true
+        });
+
+//        下拉
+        $(".down-down").hammer().on('tap',function(){
+            $(".sanjiao").toggle()
+            $(".down-show").toggle()
+            $(".title").toggleClass("active")
+            $(".swiper-slide").toggleClass("active")
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>浙江省电力公司</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/person_infor.css">
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery.hammer.min.js"></script>
+    <script src="js/person_infor.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+
+    <!--提示信息-->
+    <div id="mess">错了</div>
+
+
+    <!--<div id="wrapper">-->
+        <!--<div id="scroller">-->
+            <!--表单-->
+            <form>
+                <div class="box">
+                    <div class="title-box"></div>
+                    <div class="title">个人信息</div>
+                    <div class="choose">+选择公司</div>
+                    <input type="hidden" value="" name="" class="hidden">
+                    <ul class="company-show">
+                        <!--选择的公司名-->
+                    </ul>
+                    <div id="alertBox">
+                        <div class="choose-con">
+                            <div class="over-box">
+                                <div id="1" class="company">
+                                    <span class="btn"></span>
+                                    <span class="btn-con">杭州台鸿科技有限公司1</span>
+                                </div>
+                                <div id="2" class="company">
+                                    <span class="btn"></span>
+                                    <span class="btn-con">杭州台鸿科技有限公司2</span>
+                                </div>
+                                <div id="3" class="company">
+                                    <span class="btn"></span>
+                                    <span class="btn-con">杭州台鸿科技有限公司3</span>
+                                </div>
+                                <div id="4" class="company">
+                                    <span class="btn"></span>
+                                    <span class="btn-con">杭州台鸿科技有限公司4</span>
+                                </div>
+                                <div id="5" class="company">
+                                    <span class="btn"></span>
+                                    <span class="btn-con">杭州台鸿科技有限公司5</span>
+                                </div>
+                                <div id="6" class="company">
+                                    <span class="btn"></span>
+                                    <span class="btn-con">杭州台鸿科技有限公司6</span>
+                                </div>
+                                <div id="7" class="company">
+                                    <span class="btn"></span>
+                                    <span class="btn-con">杭州台鸿科技有限公司7</span>
+                                </div>
+                                <div id="8" class="company">
+                                    <span class="btn"></span>
+                                    <span class="btn-con">杭州台鸿科技有限公司8</span>
+                                </div>
+                                <div id="9" class="company">
+                                    <span class="btn"></span>
+                                    <span class="btn-con">杭州台鸿科技有限公司8</span>
+                                </div>
+                                <div id="10" class="company">
+                                    <span class="btn"></span>
+                                    <span class="btn-con">杭州台鸿科技有限公司8</span>
+                                </div>
+                                <div id="11" class="company">
+                                    <span class="btn"></span>
+                                    <span class="btn-con">杭州台鸿科技有限公司8</span>
+                                </div>
+                            </div>
+
+                            <div id="sure">确认</div>
+                        </div>
+                    </div>
+                    <label>
+                        <p><span>*</span>身份证号:</p>
+                        <input type="text" name="" required>
+                    </label>
+                    <label>
+                        <p><span>*</span>姓名:</p>
+                        <input type="text" name="" required>
+                    </label>
+                    <label>
+                        <p><span>*</span>性别:</p>
+                        <select name="" required>
+                            <option value="">请选择...</option>
+                            <option value="">男</option>
+                            <option value="">女</option>
+                        </select>
+                    </label>
+                    <label>
+                        <p><span>*</span>年龄:</p>
+                        <input type="text" name="" required>
+                    </label>
+                    <label>
+                        <p><span>*</span>联系电话:</p>
+                        <input type="text" name="" required>
+                    </label>
+                    <label>
+                        <p>政治面貌:</p>
+                        <select name="">
+                            <option value="">请选择...</option>
+                            <option value="">群众</option>
+                            <option value="">团员</option>
+                            <option value="">党员</option>
+                        </select>
+                    </label>
+                    <label>
+                        <p>毕业学院:</p>
+                        <input type="text" name="">
+                    </label>
+                    <label>
+                        <p>学院类型:</p>
+                        <select name="">
+                            <option value="">群众</option>
+                            <option value="">团员</option>
+                            <option value="">党员</option>
+                        </select>
+                    </label>
+                    <label>
+                        <p>最高学历:</p>
+                        <select name="education" class="education">
+                            <option value="未选择">请选择...</option>
+                            <option value="专科">专科</option>
+                            <option value="本科">本科</option>
+                            <option value="研究生">研究生</option>
+                            <option value="其他">其他</option>
+                        </select>
+                    </label>
+                    <label>
+                        <p>最高学位:</p>
+                        <select name="">
+                            <option value="未选择">请选择...</option>
+                            <option value="学士">学士</option>
+                            <option value="硕士">硕士</option>
+                            <option value="博士">博士</option>
+                            <option value="其他">其他</option>
+
+                        </select>
+                    </label>
+                    <label>
+                        <p>专业名:</p>
+                        <input type="text" name="">
+                    </label>
+                    <label>
+                        <p>专业分类:</p>
+                        <input type="text" name="">
+                    </label>
+                    <label>
+                        <p>成绩排名:</p>
+                        <input type="text" name="">
+                    </label>
+                    <label class="one two">
+                        <p>硕士院校名称:</p>
+                        <input type="text" name="">
+                    </label>
+                    <label class="one two">
+                        <p>研究生专业:</p>
+                        <input type="text" name="">
+                    </label>
+                    <label class="one">
+                        <p>本科院校:</p>
+                        <input type="text" name="">
+                    </label>
+                    <label class="one">
+                        <p>本科专业:</p>
+                        <input type="text" name="">
+                    </label>
+                    <label>
+                        <p>生源地:</p>
+                        <input type="text" name="">
+                    </label>
+                    <label>
+                        <p>服从分配:</p>
+                        <select name="">
+                            <option value="">请选择...</option>
+                            <option value="">服从</option>
+                            <option value="">不服从</option>
+                        </select>
+                    </label>
+                    <label>
+                        <p>身高:</p>
+                        <input type="text" name="" required>
+                    </label>
+                    <label>
+                        <p>体重:</p>
+                        <input type="text" name="" required>
+                    </label>
+                    <label>
+                        <p>特长:</p>
+                        <input type="text" name="">
+                    </label>
+                    <label>
+                        <p>上传照片:</p>
+                        <input type="file" name="" class="file">
+                    </label>
+                    <label>
+                        <div class="submit">确认</div>
+                    </label>
+                </div>
+            </form>
+        <!--</div>-->
+    <!--</div>-->
+
+</body>
+</html>

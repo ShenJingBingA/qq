@@ -1,0 +1,306 @@
+/*头部*/
+header{
+    background: #006f6b;
+    width: 100%;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    padding: 0 0.34rem;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+header div{
+    font-size:0.28rem;
+    color: #fff;
+}
+.head-left{
+    float: left;
+}
+.head-right{
+    float: right;
+}
+header h1{
+    font-size: 0.38rem;
+    color: #fff;
+    font-weight: normal;
+    float: left;
+    margin-left:1.2rem;
+}
+/*公司简介*/
+.cll-infor{
+    margin-top: 0.88rem;
+    width: 100%;
+    background:#dfd9d9 ;
+    padding: 0.1rem 0.24rem;
+    font-size: 0.3rem;
+    /*height: 9rem;*/
+}
+/*公司列表*/
+article ul{
+    width: 100%;
+}
+article ul li{
+    width: 100%;
+    height: 1.1rem;
+    line-height: 1.1rem;
+    font-size: 0.32rem;
+    padding:0 0.34rem;
+    border-bottom: 1px solid #e7e7e7;
+}
+article ul li p{
+    float: left;
+    color: #202020;
+}
+article ul li span{
+    float: right;
+    font-family: "宋体";
+    font-size: 0.3rem;
+    color: #181818;
+}
+/*招聘信息弹框*/
+.cll-alert{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 500;
+    padding: 1rem 0.6rem;
+    box-sizing: border-box;
+    /*display: none;*/
+}
+.cll-con{
+    width: 5.34rem;
+    height: 9.28rem;
+    position: absolute;
+    top: 2.5rem;
+    left:1.16rem;
+    background: #fff;
+    /*overflow: hidden;*/
+}
+.cll-con h2{
+    text-align: center;
+    width: 96%;
+    height: 0.76rem;
+    border-bottom: 1px solid #6ba19f;
+    font-size: 0.34rem;
+    color: #006f6b;
+    line-height: 0.76rem;
+    font-weight: normal;
+    margin: 0 auto;
+    margin-bottom: 0.18rem;
+}
+.cll-con p{
+    font-size: 0.24rem;
+    line-height: 0.36rem;
+    color: #6C6C6C;
+    padding: 0 0.3rem;
+}
+.cll-con p span{
+    color: #679B98;
+}
+.sure{
+    width: 100%;
+    height: 0.66rem;
+    font-size: 0.34rem;
+    color: #fff;
+    background:#006F6B ;
+    text-align: center;
+    line-height: 0.66rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+/*查询弹框*/
+.search-box{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 500;
+    padding: 1rem 0.6rem;
+    box-sizing: border-box;
+    display: none;
+}
+.search{
+    position: absolute;
+    left: 0.96rem;
+    top: 4.6rem;
+    width: 5.65rem;
+    height:3.7rem;
+    background: #fff;
+    border-radius: 4px;
+    padding: 0.66rem 0.5rem 0 0.5rem;
+}
+.close{
+    position: absolute;
+    top: 0.18rem;
+    right: 0.22rem;
+    width: 0.32rem;
+}
+.search form{
+    width: 100%;
+    height: 2.26rem;
+}
+.search form label{
+    display: block;
+    width: 100%;
+    height: 0.5rem;
+    margin-bottom: 0.3rem;
+}
+.search form label span{
+    font-size: 0.28rem;
+    color:#5F5F5F;
+    float: left;
+    line-height: 0.5rem;
+}
+.search form label input{
+    float: right;
+    display: inline-block;
+    width: 3.4rem;
+    height: 100%;
+    border: 1px solid rgba(58,177,173,0.22);
+    outline: none;
+    padding-left: 0.1rem;
+    color: #5F5F5F;
+    font-size: 0.24rem;
+}
+.search-sure{
+    width: 100%;
+    height: 0.84rem;
+    font-size: 0.34rem;
+    color: #E7EEEE;
+    background:#006F6B;
+    text-align: center;
+    line-height: 0.84rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.error{
+    color: red;
+    font-size: 0.22rem;
+    text-align: center;
+    display: none;
+}
+/*公司简介*/
+.company-box{
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    background: rgba(0,0,0,0.7);
+    z-index: 500;
+    /*padding: 1rem 0.6rem;*/
+    box-sizing: border-box;
+    display: none;
+}
+.company-box .close{
+    top: 0.2rem;
+    right: 0.1rem;
+}
+
+
+
+
+/*新增*/
+.company-body{
+    position: absolute;
+    top: 1rem;
+    left:1.16rem;
+    width: 5.34rem;
+    height: 9.28rem;
+    background: #fff;
+    /*overflow: hidden;*/
+}
+
+
+#header {
+    position: absolute;
+    z-index: 2;
+    background: #fff;
+    top: 0;
+    left:0;
+
+    text-align: center;
+    /*width: 96%;*/
+    width: 100%;
+
+    height: 0.76rem;
+    border-bottom: 1px solid #6ba19f;
+    font-size: 0.34rem;
+    color: #006f6b;
+    line-height: 0.76rem;
+    font-weight: normal;
+}
+
+#wrapper {
+    position: absolute;
+    z-index: 888;
+    bottom: 0.66rem;
+    top: 0.76rem;
+    left:0;
+
+    background: #fff;
+    overflow: hidden;
+    width: 5.34rem;
+    height: auto;
+}
+#wrapper p{
+    width: 100%;
+}
+
+html {
+    -ms-touch-action: none;
+}
+
+
+#footer {
+    position: absolute;
+    z-index: 2000;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 0;
+    height: 0.66rem;
+    font-size: 0.34rem;
+    color: #fff;
+    background:#006F6B ;
+    text-align: center;
+    line-height: 0.66rem;
+}
+
+#scroller {
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+    background: #fff;
+}
+body.active{
+    width: 100%;
+    position: fixed;
+}

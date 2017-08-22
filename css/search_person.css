@@ -1,0 +1,136 @@
+body{
+    background: #f2f2f2;
+}
+header{
+    position: relative;
+    width: 100%;
+    height: 0.88rem;
+    left: 0;
+    top: 0;
+    line-height: 0.88rem;
+    background: #006f6b;
+    text-align: center;
+}
+header a{
+    display: block;
+    position: absolute;
+    left: 0.32rem;
+    top: 0.2rem;
+    width: 0.46rem;
+    height:0.46rem;
+    background-image: url("../images/home_03.jpg");
+    background-size: 100%;
+}
+header p{
+    font-size:0.38rem;
+    color: #fff;
+}
+/*基本信息*/
+.infor{
+    width: 7.2rem;
+    height: 2.9rem;
+    margin: 0 auto;
+    background: #fff;
+    margin-top: 0.18rem;
+    padding: 0.5rem 0.2rem 0.4rem 0.24rem;
+}
+.infor .left{
+    width:4.46rem;
+    float: left;
+    border-right: 1px solid #ccc;
+    font-size: 0.26rem;
+}
+.infor .left div{
+    width: 100%;
+    height: 0.32rem;
+    margin-bottom: 0.46rem;
+}
+.infor .left div:first-child{
+    margin-top: 0.08rem;
+}
+.infor .left div.last{
+    margin-bottom: 0.2rem;
+}
+.infor .left span{
+    color: #5C5C5C;
+    display: inline-block;
+}
+.infor .left div span:last-child{
+    width: 2.6rem;
+    height: 0.34rem;
+    border: 1px solid #e0dddd;
+    float: right;
+    border-radius: 2px;
+    margin-right: 0.44rem;
+    font-size: 0.24rem;
+    line-height: 0.34rem;
+    padding-left: 0.08rem;
+}
+.infor .right{
+    float: left;
+    width: 2.2rem;
+    padding-left: 0.5rem;
+}
+.infor .right p{
+    font-size: 0.26rem;
+    color: #5C5C5C;
+    text-align: center;
+    margin-bottom: 0.1rem;
+}
+.infor .right .img-box{
+    width: 1.6rem;
+    height: 1.6rem;
+    background:#f1f1f1 ;
+    overflow: hidden;
+}
+/*分组信息*/
+table {
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid #fff;
+}
+.group{
+    width: 7.2rem;
+    margin: 0 auto;
+    background: #fff;
+    margin-top: 0.2rem;
+}
+.group .row{
+    width: 100%;
+    height: 0.76rem;
+    font-size: 0.28rem;
+}
+.group .row th{
+    border-bottom:1px solid #c6c6c6 ;
+}
+.group tr{
+    width: 100%;
+    height: 1rem;
+    border-bottom:1px solid #c6c6c6 ;
+    font-size: 0.28rem;
+    font-weight: normal;
+}
+.group tr th{
+    font-weight: normal;
+    color: #5C5C5C;
+}
+.group tr:last-child{
+    border: none;
+}
+.group tr td{
+    font-size: 0.24rem;
+    padding-left:0.14rem;
+    padding-right:0.14rem;
+    color: #5C5C5C;
+}
+.one{
+    width: 2rem;
+    border-right:1px solid #c6c6c6;
+}
+.two{
+    width: 1rem;
+    border-right:1px solid #c6c6c6;
+}
+.three{
+    width: 3rem;
+}

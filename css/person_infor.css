@@ -1,0 +1,248 @@
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+html {
+    -ms-touch-action: none;
+}
+
+body,ul,li {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+body {
+    font-size: 12px;
+    font-family: ubuntu, helvetica, arial;
+     /* this is important to prevent the whole page to bounce */
+}
+
+#wrapper {
+    position: absolute;
+    z-index: 1;
+    top:0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: #fff;
+    overflow: hidden;
+}
+
+#scroller {
+    position: absolute;
+    z-index: 1;
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    width: 100%;
+    -webkit-transform: translateZ(0);
+    -moz-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-text-size-adjust: none;
+    -moz-text-size-adjust: none;
+    -ms-text-size-adjust: none;
+    -o-text-size-adjust: none;
+    text-size-adjust: none;
+    background: #fff;
+    /*padding: 0.24rem 0.5rem 0.3rem 0.38rem;*/
+}
+/*form表单*/
+form{
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+}
+form label{
+    display: block;
+    width: 100%;
+    height: 0.8rem;
+    margin-bottom: 0.2rem;
+    padding: 0 0.5rem 0 0.38rem;
+}
+form label p{
+    float: left;
+    font-size:0.26rem;
+    color: #A9A9A9;
+    width: 1.7rem;
+    text-align: right;
+    line-height: 0.8rem;
+}
+form label p span{
+    color: red;
+    margin-right: 0.08rem;
+}
+form label input,form label select{
+    float: right;
+    width: 4.8rem;
+    height: 0.8rem;
+    border: 1px solid #e0dddd;
+    outline: none;
+    padding-left: 0.1rem;
+    font-size: 0.28rem;
+}
+.file{
+    border: none;
+}
+.submit{
+    width: 100%;
+    height: 0.8rem;
+    background: #006f6b;
+    color: #fff;
+    font-size: 0.3rem;
+    margin-top: 0.2rem;
+}
+/*提示信息*/
+#mess{
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    margin: auto;
+    z-index: 100;
+    width: 4.4rem;
+    height: 1rem;
+    background: rgba(0,0,0,0.7);
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    line-height: 1rem;
+    font-size: 0.28rem;
+    display: none;
+}
+
+
+
+/*新加*/
+.box{
+    width: 100%;
+}
+.title-box{
+    width: 100%;
+    height: 0.88rem;
+}
+.title {
+    width: 100%;
+    height: 0.88rem;
+    line-height: 0.88rem;
+    background: #006f6b;
+    padding: 0;
+    color: #fff;
+    font-size: 0.38rem;
+    text-align: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+}
+.choose{
+    width: 6rem;
+    height: 0.9rem;
+    border-radius: 0.45rem;
+    background: #129e99;
+    text-align: center;
+    line-height: 0.9rem;
+    color: #fff;
+    font-size: 0.24rem;
+    margin: 0.2rem auto;
+    font-size: 0.3rem;
+}
+#alertBox{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    background: rgba(0,0,0,0.4);
+    display: none;
+}
+.choose-con{
+    width: 5.34rem;
+    height: 9.28rem;
+    position: absolute;
+    top: 1.5rem;
+    left: 1.25rem;
+    background: #fff;
+}
+.choose-con > div{
+    width: 5.34rem;
+    height: 8.76rem;
+    overflow-y:auto;
+}
+.choose-con .company{
+    width: 100%;
+    height: 1rem;
+    border-bottom: 1px solid #e1f3f2;
+    text-align: center;
+    line-height: 1rem;
+}
+.company .btn{
+    display: inline-block;
+    width: 0.42rem;
+    height: 0.42rem;
+    border-radius: 50%;
+    /*border: 1px solid #ccc;*/
+    margin-right: 0.2rem;
+    background:url("../images/weixuan.png") no-repeat;
+    background-size: 100%;
+    vertical-align: sub;
+}
+/*选中*/
+.company-active .btn{
+    background:url("../images/xuanzhong.jpg") no-repeat;
+    background-size: 100%;
+}
+.company-show{
+    width: 100%;
+    padding: 0.2rem 0;
+}
+.company-show li{
+    width: 100%;
+    height: 0.7rem;
+    background:rgba(241, 241, 241, 0.3);
+    margin-bottom: 0.2rem;
+    font-size: 0.26rem;
+    color: #696969;
+    line-height: 0.7rem;
+    text-align: center;
+}
+
+
+.company .btn-con{
+    font-size: 0.32rem;
+    color: #696969;
+}
+#sure{
+    width: 100%;
+    height: 0.8rem;
+    background:#006f6b;
+    text-align: center;
+    line-height: 0.66rem;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.3rem;
+}
+
+
+body.active{
+    width: 100%;
+    position: fixed;
+}
+
+
+
+/*new*/
+.one{
+    display: none;
+}

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>浙江省电力公司</title>
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/search_person.css">
+    <script src="js/jquery.js"></script>
+    <script>
+        (function (doc, win) {
+            var docEl = doc.documentElement,
+                resizeEvt = 'orientationchange' in window ? 'orientationchange' : 'resize',
+                recalc = function () {
+                    var clientWidth = docEl.clientWidth;
+                    if (!clientWidth) return;
+                    if(clientWidth>=750){
+                        docEl.style.fontSize = '100px';
+                    }else{
+                        docEl.style.fontSize = 100 * (clientWidth / 750) + 'px';
+                    }
+                };
+
+            if (!doc.addEventListener) return;
+            win.addEventListener(resizeEvt, recalc, false);
+            doc.addEventListener('DOMContentLoaded', recalc, false);
+        })(document, window);
+    </script>
+</head>
+<body>
+
+    <header>
+        <a href="unit_infor.html"></a>
+        <p>个人信息查询</p>
+    </header>
+    <!--基本信息-->
+    <div class="infor">
+        <div class="left">
+            <div>
+                <span>姓&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名：</span>
+                <span>哈哈哈</span>
+            </div>
+            <div>
+                <span>电&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;话：</span>
+                <span>17263846274</span>
+            </div>
+            <div class="last">
+                <span>身份证号：</span>
+                <span>140522199410127723</span>
+            </div>
+        </div>
+        <div class="right">
+            <p>照片</p>
+            <div class="img-box">
+                <img src="" alt="">
+            </div>
+        </div>
+    </div>
+    <!--分组信息-->
+    <table class="group" cellpadding="0" cellspacing="0">
+        <tr class="row">
+            <th class="one">申请单位</th>
+            <th class="two">结果</th>
+            <th class="three">分组</th>
+        </tr>
+        <tr>
+            <td class="one">xxxxxx</td>
+            <td class="two">通过</td>
+            <td class="three">xxxx大学第一场第xx组</td>
+        </tr>
+        <tr>
+            <td class="one">xxxxxx</td>
+            <td class="two">审核</td>
+            <td class="three">xxxx大学第一场第xx组xxx哈哈啊</td>
+        </tr>
+    </table>
+
+</body>
+</html>
